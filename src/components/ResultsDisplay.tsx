@@ -18,6 +18,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import { ArrowRight, Pill, User, Hospital } from "lucide-react";
+import Link from "next/link";
 
 interface ResultsDisplayProps {
   results: AnalyzeSymptomsOutput;
@@ -117,7 +118,9 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
                     <p className="text-sm text-muted-foreground">Discuss your symptoms with a general practitioner or a specialist.</p>
                 </CardContent>
                 <CardFooter className="justify-center">
+                  <a href="https://www.webmd.com" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                  </a>
                 </CardFooter>
             </Card>
             <Card className="shadow-md hover:shadow-lg transition--shadow bg-background">
@@ -131,7 +134,9 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
                     <p className="text-sm text-muted-foreground">Locate nearby clinics or hospitals for an in-person consultation.</p>
                 </CardContent>
                 <CardFooter className="justify-center">
+                  <a href="https://www.google.com/maps/search/clinics+near+me" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline">Find Nearby <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                  </a>
                 </CardFooter>
             </Card>
             <Card className="shadow-md hover:shadow-lg transition-shadow bg-background">
@@ -145,7 +150,9 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
                     <p className="text-sm text-muted-foreground">Explore reputable health websites like WebMD or Mayo Clinic.</p>
                 </CardContent>
                 <CardFooter className="justify-center">
+                  <a href="https://www.mayoclinic.org/patient-care-and-health-information" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline">Explore <ArrowRight className="ml-2 h-4 w-4" /></Button>
+                  </a>
                 </CardFooter>
             </Card>
         </CardContent>
