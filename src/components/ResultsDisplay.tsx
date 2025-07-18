@@ -17,7 +17,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
-import { ArrowRight, Pill, UserMd, Hospital } from "lucide-react";
+import { ArrowRight, Pill, User, Hospital } from "lucide-react";
 
 interface ResultsDisplayProps {
   results: AnalyzeSymptomsOutput;
@@ -105,7 +105,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
         <CardContent className="grid gap-4 md:grid-cols-3">
             <Card>
                 <CardHeader>
-                    <UserMd className="h-8 w-8 text-primary mb-2" />
+                    <User className="h-8 w-8 text-primary mb-2" />
                     <CardTitle className="text-lg">Consult a Doctor</CardTitle>
                 </CardHeader>
                 <CardContent>
