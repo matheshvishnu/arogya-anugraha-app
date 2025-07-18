@@ -47,13 +47,13 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col min-h-screen bg-black">
       <header className="p-4 border-b bg-card shadow-sm sticky top-0 z-20">
         <div className="container mx-auto flex items-center gap-4">
           <div className="p-3 bg-primary/10 text-primary rounded-lg">
             <Stethoscope className="h-7 w-7" />
           </div>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground">MediScan</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-foreground">Arogya Nalam</h1>
         </div>
       </header>
 
@@ -94,9 +94,9 @@ export default function Home() {
       <footer className="p-6 mt-16 bg-card border-t text-center text-sm text-muted-foreground">
         <div className="container mx-auto">
           <p>
-            <span className="font-semibold">Disclaimer:</span> MediScan is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns.
+            <span className="font-semibold">Disclaimer:</span> Arogya Nalam is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns.
           </p>
-          <p className="mt-2 text-xs">&copy; {new Date().getFullYear()} MediScan. All Rights Reserved.</p>
+          <p className="mt-2 text-xs">&copy; {new Date().getFullYear()} Arogya Nalam. All Rights Reserved.</p>
         </div>
       </footer>
       
