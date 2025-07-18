@@ -5,7 +5,6 @@ import type { AnalyzeSymptomsOutput } from "@/ai/flows/analyze-symptoms";
 import { getAnalysis } from "@/app/actions";
 
 import { Stethoscope } from "lucide-react";
-import Image from "next/image";
 
 import { SymptomForm, type SymptomFormValues } from "@/components/SymptomForm";
 import { ResultsDisplay } from "@/components/ResultsDisplay";
@@ -48,7 +47,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <header className="p-4 border-b bg-card shadow-sm sticky top-0 z-20">
         <div className="container mx-auto flex items-center gap-4">
           <div className="p-3 bg-primary/20 text-primary rounded-lg">
@@ -58,29 +57,17 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex-grow container mx-auto p-4 md:p-8 lg:p-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-16">
-            <div className="text-center space-y-6">
+      <main className="flex-grow container mx-auto p-4 md:p-8">
+        <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
                 Intelligent Symptom Analysis
               </h2>
-              <p className="mt-3 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                 Enter your symptoms and let our AI provide you with a
                 preliminary analysis of potential conditions. This is not a substitute for professional medical advice.
               </p>
             </div>
-            
-            <div className="relative w-full aspect-[2/1] rounded-xl overflow-hidden shadow-2xl">
-              <Image 
-                src="https://placehold.co/1200x600.png" 
-                alt="AI assisting with medical analysis"
-                layout="fill"
-                objectFit="cover"
-                data-ai-hint="ai medical"
-              />
-            </div>
-
 
             <SymptomForm
               onSubmit={handleAnalysis}
@@ -88,7 +75,7 @@ export default function Home() {
             />
             
             {state === "loading" && (
-              <div className="space-y-6">
+              <div className="space-y-6 pt-8">
                  <div className="space-y-4">
                   <Skeleton className="h-40 w-full" />
                   <Skeleton className="h-10 w-1/4 ml-auto" />
@@ -99,7 +86,6 @@ export default function Home() {
             {state === "results" && analysisResult && (
               <ResultsDisplay results={analysisResult} />
             )}
-          </div>
         </div>
       </main>
       
