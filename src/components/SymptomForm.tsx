@@ -52,7 +52,7 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
   });
 
   return (
-    <Card className="shadow-lg border-primary/20">
+    <Card>
       <CardHeader>
         <CardTitle className="text-2xl">Symptom Checker</CardTitle>
         <CardDescription>
