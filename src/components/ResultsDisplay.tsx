@@ -40,13 +40,13 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
     if (confidence > 0.7)
       return <Badge variant="destructive" className="text-sm">High</Badge>;
     if (confidence > 0.4)
-      return <Badge variant="secondary" className="bg-yellow-100 text-yellow-800 border-yellow-200 text-sm">Medium</Badge>;
+      return <Badge variant="secondary" className="bg-yellow-400/20 text-yellow-300 border-yellow-400/30 text-sm">Medium</Badge>;
     return <Badge variant="outline" className="text-sm">Low</Badge>;
   };
 
   return (
     <div className="space-y-8 animate-in fade-in-50 duration-500">
-      <Card className="shadow-lg border-primary/20">
+      <Card>
         <CardHeader>
           <CardTitle className="text-2xl">Potential Conditions Analysis</CardTitle>
           <CardDescription>
@@ -80,7 +80,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
       
       <div className="space-y-4">
         {results.conditions.map(({ condition, confidence }) => (
-          <Card key={condition} className="shadow-sm">
+          <Card key={condition}>
             <CardHeader className="flex flex-row items-center justify-between">
               <div className="space-y-1">
                 <CardTitle className="text-xl font-medium">{condition}</CardTitle>
@@ -98,7 +98,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
         ))}
       </div>
 
-      <Card className="bg-accent/50">
+      <Card className="bg-card">
         <CardHeader>
             <CardTitle className="text-2xl">Next Steps & Recommendations</CardTitle>
             <CardDescription>
@@ -120,7 +120,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
                     <Button variant="outline">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Button>
                 </CardFooter>
             </Card>
-            <Card className="shadow-md hover:shadow-lg transition-shadow bg-background">
+            <Card className="shadow-md hover:shadow-lg transition--shadow bg-background">
                 <CardHeader className="items-center text-center">
                      <div className="p-3 bg-primary/10 rounded-full mb-2">
                         <Hospital className="h-8 w-8 text-primary" />
