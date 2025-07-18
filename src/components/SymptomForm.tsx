@@ -52,9 +52,9 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
   });
 
   return (
-    <Card>
+    <Card className="shadow-lg border-primary/20">
       <CardHeader>
-        <CardTitle>Symptom Checker</CardTitle>
+        <CardTitle className="text-2xl">Symptom Checker</CardTitle>
         <CardDescription>
           Please list all symptoms you are currently experiencing. Be as detailed as possible for the most accurate analysis.
         </CardDescription>
@@ -67,11 +67,12 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
               name="symptoms"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Current Symptoms</FormLabel>
+                  <FormLabel className="text-base">Current Symptoms</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="e.g., persistent headache, fatigue, sore throat for 3 days"
                       rows={5}
+                      className="text-base"
                       {...field}
                     />
                   </FormControl>
@@ -87,11 +88,12 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
               name="medicalHistory"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Relevant Medical History (Optional)</FormLabel>
+                  <FormLabel className="text-base">Relevant Medical History (Optional)</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="e.g., history of migraines, allergies to penicillin"
                       rows={3}
+                      className="text-base"
                       {...field}
                     />
                   </FormControl>
@@ -103,15 +105,15 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
               )}
             />
             <div className="flex justify-end">
-              <Button type="submit" disabled={isLoading} size="lg">
+              <Button type="submit" disabled={isLoading} size="lg" className="text-base font-semibold">
                 {isLoading ? (
                   <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                     Analyzing...
                   </>
                 ) : (
                   <>
-                    <Send className="mr-2 h-4 w-4" />
+                    <Send className="mr-2 h-5 w-5" />
                     Analyze Symptoms
                   </>
                 )}

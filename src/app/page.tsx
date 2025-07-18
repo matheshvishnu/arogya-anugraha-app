@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { AnalyzeSymptomsOutput } from "@/ai/flows/analyze-symptoms";
 import { getAnalysis } from "@/app/actions";
 
-import { Stethoscope, FileText, BotMessageSquare } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 
 import { SymptomForm, type SymptomFormValues } from "@/components/SymptomForm";
 import { ResultsDisplay } from "@/components/ResultsDisplay";
@@ -47,24 +47,26 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="p-4 border-b">
-        <div className="container mx-auto flex items-center gap-2">
-          <Stethoscope className="h-6 w-6 text-primary" />
-          <h1 className="text-xl font-bold font-headline">MediScan</h1>
+    <div className="flex flex-col min-h-screen bg-secondary/30">
+      <header className="p-4 border-b bg-background shadow-sm">
+        <div className="container mx-auto flex items-center gap-3">
+          <div className="p-2 bg-primary/10 text-primary rounded-lg">
+            <Stethoscope className="h-6 w-6" />
+          </div>
+          <h1 className="text-xl font-bold tracking-tight">MediScan</h1>
         </div>
       </header>
 
       <main className="flex-grow container mx-auto p-4 md:p-8">
-        <div className="max-w-3xl mx-auto">
-          <div className="space-y-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-12">
             <div className="text-center">
-              <h2 className="text-3xl font-bold font-headline tracking-tight">
+              <h2 className="text-4xl font-bold font-headline tracking-tight">
                 Intelligent Symptom Analysis
               </h2>
-              <p className="mt-2 text-muted-foreground">
+              <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
                 Enter your symptoms and let our AI provide you with a
-                preliminary analysis.
+                preliminary analysis of potential conditions.
               </p>
             </div>
 
@@ -75,11 +77,9 @@ export default function Home() {
             
             {state === "loading" && (
               <div className="space-y-6">
-                <Skeleton className="h-10 w-1/3 mx-auto" />
-                <div className="space-y-4">
-                  <Skeleton className="h-32 w-full" />
-                  <Skeleton className="h-8 w-full" />
-                  <Skeleton className="h-8 w-full" />
+                 <div className="space-y-4">
+                  <Skeleton className="h-40 w-full" />
+                  <Skeleton className="h-10 w-1/4 ml-auto" />
                 </div>
               </div>
             )}
@@ -91,10 +91,11 @@ export default function Home() {
         </div>
       </main>
       
-      <footer className="p-4 border-t text-center text-xs text-muted-foreground">
+      <footer className="p-6 mt-12 bg-background border-t text-center text-sm text-muted-foreground">
         <p>
           <span className="font-semibold">Disclaimer:</span> MediScan is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns.
         </p>
+        <p className="mt-2 text-xs">&copy; {new Date().getFullYear()} MediScan. All Rights Reserved.</p>
       </footer>
       
       <DisclaimerDialog
