@@ -47,7 +47,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col min-h-screen">
       <header className="p-4 border-b bg-card shadow-sm sticky top-0 z-20">
         <div className="container mx-auto flex items-center gap-4">
           <div className="p-3 bg-primary/20 text-primary rounded-lg">
