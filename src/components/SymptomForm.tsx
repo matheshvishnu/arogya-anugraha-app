@@ -52,9 +52,9 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
   });
 
   return (
-    <Card>
+    <Card className="border-primary/20 shadow-lg shadow-primary/10">
       <CardHeader>
-        <CardTitle className="text-2xl">Symptom Checker</CardTitle>
+        <CardTitle className="text-2xl text-primary">Symptom Checker</CardTitle>
         <CardDescription>
           Please list all symptoms you are currently experiencing. Be as detailed as possible for the most accurate analysis.
         </CardDescription>
@@ -72,7 +72,7 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
                     <Textarea
                       placeholder="e.g., persistent headache, fatigue, sore throat for 3 days"
                       rows={5}
-                      className="text-base"
+                      className="text-base focus-visible:ring-primary"
                       {...field}
                     />
                   </FormControl>
@@ -93,7 +93,7 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
                     <Textarea
                       placeholder="e.g., history of migraines, allergies to penicillin"
                       rows={3}
-                      className="text-base"
+                      className="text-base focus-visible:ring-primary"
                       {...field}
                     />
                   </FormControl>

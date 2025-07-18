@@ -49,18 +49,16 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <header className="p-4 border-b bg-card shadow-sm sticky top-0 z-20">
-        <div className="container mx-auto flex items-center gap-4">
-          <div className="p-3 bg-primary/20 text-primary rounded-lg">
-            <Stethoscope className="h-7 w-7" />
-          </div>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground font-display">Arogya Anugraha</h1>
+        <div className="container mx-auto flex items-center justify-center gap-4">
+          <Stethoscope className="h-8 w-8 text-destructive" />
+          <h1 className="text-3xl font-bold tracking-tight text-destructive font-display">Arogya Anugraha</h1>
         </div>
       </header>
 
       <main className="flex-grow container mx-auto p-4 md:p-8">
         <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+              <h2 className="text-4xl md:text-5xl font-semibold tracking-tight text-brown">
                 Intelligent Symptom Analysis
               </h2>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
