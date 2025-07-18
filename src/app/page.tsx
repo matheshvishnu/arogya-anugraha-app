@@ -5,6 +5,7 @@ import type { AnalyzeSymptomsOutput } from "@/ai/flows/analyze-symptoms";
 import { getAnalysis } from "@/app/actions";
 
 import { Stethoscope } from "lucide-react";
+import Image from "next/image";
 
 import { SymptomForm, type SymptomFormValues } from "@/components/SymptomForm";
 import { ResultsDisplay } from "@/components/ResultsDisplay";
@@ -60,7 +61,7 @@ export default function Home() {
       <main className="flex-grow container mx-auto p-4 md:p-8 lg:p-12">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-16">
-            <div className="text-center space-y-4">
+            <div className="text-center space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
                 Intelligent Symptom Analysis
               </h2>
@@ -69,6 +70,17 @@ export default function Home() {
                 preliminary analysis of potential conditions. This is not a substitute for professional medical advice.
               </p>
             </div>
+            
+            <div className="relative w-full aspect-[2/1] rounded-xl overflow-hidden shadow-2xl">
+              <Image 
+                src="https://placehold.co/1200x600.png" 
+                alt="AI assisting with medical analysis"
+                layout="fill"
+                objectFit="cover"
+                data-ai-hint="ai medical"
+              />
+            </div>
+
 
             <SymptomForm
               onSubmit={handleAnalysis}
