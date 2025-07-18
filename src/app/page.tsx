@@ -53,7 +53,7 @@ export default function Home() {
           <div className="p-3 bg-primary/20 text-primary rounded-lg">
             <Stethoscope className="h-7 w-7" />
           </div>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground">Arogya Anugraha</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-foreground font-display">Arogya Anugraha</h1>
         </div>
       </header>
 
