@@ -39,9 +39,9 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
 
   const getConfidenceBadge = (confidence: number) => {
     if (confidence > 0.7)
-      return <Badge variant="destructive" className="text-sm">High</Badge>;
+      return <Badge className="text-sm bg-primary/90 hover:bg-primary/90 text-primary-foreground">High</Badge>;
     if (confidence > 0.4)
-      return <Badge variant="secondary" className="bg-yellow-400/20 text-yellow-300 border-yellow-400/30 text-sm">Medium</Badge>;
+      return <Badge variant="secondary" className="text-sm">Medium</Badge>;
     return <Badge variant="outline" className="text-sm">Low</Badge>;
   };
 
