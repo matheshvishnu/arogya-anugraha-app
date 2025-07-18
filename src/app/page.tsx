@@ -47,10 +47,10 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black">
+    <div className="flex flex-col min-h-screen bg-background">
       <header className="p-4 border-b bg-card shadow-sm sticky top-0 z-20">
         <div className="container mx-auto flex items-center gap-4">
-          <div className="p-3 bg-primary/10 text-primary rounded-lg">
+          <div className="p-3 bg-primary/20 text-primary rounded-lg">
             <Stethoscope className="h-7 w-7" />
           </div>
           <h1 className="text-2xl font-bold tracking-tight text-foreground">Arogya Nalam</h1>
