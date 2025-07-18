@@ -18,7 +18,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import { ArrowRight, Pill, User, Hospital } from "lucide-react";
-import Link from "next/link";
 
 interface ResultsDisplayProps {
   results: AnalyzeSymptomsOutput;
@@ -99,7 +98,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
         ))}
       </div>
 
-      <Card className="bg-card">
+      <Card>
         <CardHeader>
             <CardTitle className="text-2xl">Next Steps & Recommendations</CardTitle>
             <CardDescription>
@@ -107,7 +106,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
             </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-6 md:grid-cols-3">
-            <Card className="shadow-md hover:shadow-lg transition-shadow bg-background">
+            <Card className="shadow-none hover:shadow-lg transition-shadow bg-card border">
                 <CardHeader className="items-center text-center">
                     <div className="p-3 bg-primary/10 rounded-full mb-2">
                       <User className="h-8 w-8 text-primary" />
@@ -123,7 +122,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
                   </a>
                 </CardFooter>
             </Card>
-            <Card className="shadow-md hover:shadow-lg transition--shadow bg-background">
+            <Card className="shadow-none hover:shadow-lg transition-shadow bg-card border">
                 <CardHeader className="items-center text-center">
                      <div className="p-3 bg-primary/10 rounded-full mb-2">
                         <Hospital className="h-8 w-8 text-primary" />
@@ -139,7 +138,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
                   </a>
                 </CardFooter>
             </Card>
-            <Card className="shadow-md hover:shadow-lg transition-shadow bg-background">
+            <Card className="shadow-none hover:shadow-lg transition-shadow bg-card border">
                 <CardHeader className="items-center text-center">
                     <div className="p-3 bg-primary/10 rounded-full mb-2">
                         <Pill className="h-8 w-8 text-primary" />
