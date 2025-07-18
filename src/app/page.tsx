@@ -47,26 +47,26 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-secondary/30">
-      <header className="p-4 border-b bg-background shadow-sm">
-        <div className="container mx-auto flex items-center gap-3">
-          <div className="p-2 bg-primary/10 text-primary rounded-lg">
-            <Stethoscope className="h-6 w-6" />
+    <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-950">
+      <header className="p-4 border-b bg-background shadow-sm sticky top-0 z-20">
+        <div className="container mx-auto flex items-center gap-4">
+          <div className="p-3 bg-primary/10 text-primary rounded-lg">
+            <Stethoscope className="h-7 w-7" />
           </div>
-          <h1 className="text-xl font-bold tracking-tight">MediScan</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">MediScan</h1>
         </div>
       </header>
 
-      <main className="flex-grow container mx-auto p-4 md:p-8">
+      <main className="flex-grow container mx-auto p-4 md:p-8 lg:p-12">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-12">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold font-headline tracking-tight">
+          <div className="space-y-16">
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold font-headline tracking-tight text-gray-900 dark:text-gray-100">
                 Intelligent Symptom Analysis
               </h2>
-              <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-3 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                 Enter your symptoms and let our AI provide you with a
-                preliminary analysis of potential conditions.
+                preliminary analysis of potential conditions. This is not a substitute for professional medical advice.
               </p>
             </div>
 
@@ -91,11 +91,13 @@ export default function Home() {
         </div>
       </main>
       
-      <footer className="p-6 mt-12 bg-background border-t text-center text-sm text-muted-foreground">
-        <p>
-          <span className="font-semibold">Disclaimer:</span> MediScan is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns.
-        </p>
-        <p className="mt-2 text-xs">&copy; {new Date().getFullYear()} MediScan. All Rights Reserved.</p>
+      <footer className="p-6 mt-16 bg-background border-t text-center text-sm text-muted-foreground">
+        <div className="container mx-auto">
+          <p>
+            <span className="font-semibold">Disclaimer:</span> MediScan is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns.
+          </p>
+          <p className="mt-2 text-xs">&copy; {new Date().getFullYear()} MediScan. All Rights Reserved.</p>
+        </div>
       </footer>
       
       <DisclaimerDialog

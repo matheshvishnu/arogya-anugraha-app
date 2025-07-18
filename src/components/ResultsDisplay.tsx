@@ -98,7 +98,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
         ))}
       </div>
 
-      <Card className="bg-accent">
+      <Card className="bg-accent/50">
         <CardHeader>
             <CardTitle className="text-2xl">Next Steps & Recommendations</CardTitle>
             <CardDescription>
@@ -106,7 +106,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
             </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-6 md:grid-cols-3">
-            <Card className="shadow-md hover:shadow-lg transition-shadow">
+            <Card className="shadow-md hover:shadow-lg transition-shadow bg-background">
                 <CardHeader className="items-center text-center">
                     <div className="p-3 bg-primary/10 rounded-full mb-2">
                       <User className="h-8 w-8 text-primary" />
@@ -120,7 +120,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
                     <Button variant="outline">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Button>
                 </CardFooter>
             </Card>
-            <Card className="shadow-md hover:shadow-lg transition-shadow">
+            <Card className="shadow-md hover:shadow-lg transition-shadow bg-background">
                 <CardHeader className="items-center text-center">
                      <div className="p-3 bg-primary/10 rounded-full mb-2">
                         <Hospital className="h-8 w-8 text-primary" />
@@ -134,7 +134,7 @@ export function ResultsDisplay({ results }: ResultsDisplayProps) {
                     <Button variant="outline">Find Nearby <ArrowRight className="ml-2 h-4 w-4" /></Button>
                 </CardFooter>
             </Card>
-            <Card className="shadow-md hover:shadow-lg transition-shadow">
+            <Card className="shadow-md hover:shadow-lg transition-shadow bg-background">
                 <CardHeader className="items-center text-center">
                     <div className="p-3 bg-primary/10 rounded-full mb-2">
                         <Pill className="h-8 w-8 text-primary" />
