@@ -53,7 +53,7 @@ export default function Home() {
           <div className="p-3 bg-primary/20 text-primary rounded-lg">
             <Stethoscope className="h-7 w-7" />
           </div>
-          <h1 className="text-2xl font-bold tracking-tight text-foreground">Dhanvanthri Seva</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-foreground">Arogya Anugraha</h1>
         </div>
       </header>
 
@@ -94,9 +94,9 @@ export default function Home() {
       <footer className="p-6 mt-16 bg-card border-t text-center text-sm text-muted-foreground">
         <div className="container mx-auto">
           <p>
-            <span className="font-semibold">Disclaimer:</span> Dhanvanthri Seva is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns.
+            <span className="font-semibold">Disclaimer:</span> Arogya Anugraha is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns.
           </p>
-          <p className="mt-2 text-xs">&copy; {new Date().getFullYear()} Dhanvanthri Seva. All Rights Reserved.</p>
+          <p className="mt-2 text-xs">&copy; {new Date().getFullYear()} Arogya Anugraha. All Rights Reserved.</p>
         </div>
       </footer>
       
