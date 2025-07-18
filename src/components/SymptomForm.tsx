@@ -54,7 +54,7 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
   return (
     <Card className="border-primary/20 shadow-lg shadow-primary/10">
       <CardHeader>
-        <CardTitle className="text-2xl text-primary">Symptom Checker</CardTitle>
+        <CardTitle className="text-2xl font-headline text-primary">Symptom Checker</CardTitle>
         <CardDescription>
           Please list all symptoms you are currently experiencing. Be as detailed as possible for the most accurate analysis.
         </CardDescription>
@@ -67,12 +67,12 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
               name="symptoms"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-base">Current Symptoms</FormLabel>
+                  <FormLabel className="text-base font-medium">Current Symptoms</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="e.g., persistent headache, fatigue, sore throat for 3 days"
                       rows={5}
-                      className="text-base focus-visible:ring-primary"
+                      className="text-base focus-visible:ring-primary/80"
                       {...field}
                     />
                   </FormControl>
@@ -88,12 +88,12 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
               name="medicalHistory"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-base">Relevant Medical History (Optional)</FormLabel>
+                  <FormLabel className="text-base font-medium">Relevant Medical History (Optional)</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="e.g., history of migraines, allergies to penicillin"
                       rows={3}
-                      className="text-base focus-visible:ring-primary"
+                      className="text-base focus-visible:ring-primary/80"
                       {...field}
                     />
                   </FormControl>
@@ -113,8 +113,8 @@ export function SymptomForm({ onSubmit, isLoading }: SymptomFormProps) {
                   </>
                 ) : (
                   <>
-                    <Send className="mr-2 h-5 w-5" />
                     Analyze Symptoms
+                    <Send className="ml-2 h-5 w-5" />
                   </>
                 )}
               </Button>
