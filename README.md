@@ -127,10 +127,6 @@ As a healthcare AI project, **Arogya Anugraha** adheres to the following ethical
 
 Contributions are welcome! If you find a bug or have a feature suggestion, please open an issue or submit a pull request.
 
-### License
-
-This project is licensed under the [MIT License](LICENSE) - see the `LICENSE` file for details.
-
 ### Contact
 
 For any questions or feedback, feel free to reach out:
