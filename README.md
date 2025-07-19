@@ -4,7 +4,7 @@
 
 ### Overview
 
-**Arogya Anugraha** is a cutting-edge healthcare application developed as a final year project for Computer Science and Engineering. It leverages custom-trained Machine Learning models and a robust Firebase backend to provide users with preliminary, data-driven insights into potential health conditions based on their reported symptoms and health information. The application aims to empower individuals with better health awareness and guide them towards proactive health management, all while prioritizing user privacy and responsible AI practices.
+**Arogya Anugraha** is a cutting-edge healthcare application developed during my semester holiday. It leverages custom-trained Machine Learning models and a robust Firebase backend to provide users with preliminary, data-driven insights into potential health conditions based on their reported symptoms and health information. The application aims to empower individuals with better health awareness and guide them towards proactive health management, all while prioritizing user privacy and responsible AI practices.
 
 This project showcases a full-stack development approach, integrating a custom ML pipeline with a scalable cloud infrastructure.
 
